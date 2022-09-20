@@ -1,0 +1,72 @@
+@use '../../scss/base/typography';
+@use '../../scss/abstracts' as *;
+
+.section {
+  background-color: $color-light;
+  margin-top: -20vh;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6.2rem;
+}
+
+.paragraph {
+  margin-bottom: 3.2rem;
+}
+
+.anchor {
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 0.2rem solid $color-primary;
+  padding: 1rem 0.5rem;
+  color: $color-primary-dark;
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    color: white;
+    border: none;
+    background-color: $color-primary-dark;
+  }
+}
+
+.images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  img {
+    position: absolute;
+    width: 55%;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+    outline-offset: 1.1rem;
+
+    &:hover {
+      transform: scale(1.05);
+      box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
+      z-index: 2;
+      outline: 0.5rem solid $color-primary;
+    }
+  }
+  &--pool {
+    left: 0;
+    top: -2rem;
+  }
+  &--spa {
+    right: 0;
+    top: 2rem;
+  }
+  &--villa {
+    left: 20%;
+    top: 10rem;
+  }
+  &:hover {
+    img:not(:hover) {
+      transform: scale(0.9);
+    }
+  }
+}

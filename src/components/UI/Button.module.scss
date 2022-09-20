@@ -1,0 +1,24 @@
+@use '../../scss/abstracts' as *;
+
+.btn {
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  padding: 1.6rem 4rem;
+  border-radius: 10rem;
+  color: $color-dark;
+  transition: all 0.4s;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  background-size: 200%;
+  background-image: linear-gradient(
+    to left,
+    $color-primary,
+    $color-primary-dark,
+    $color-primary-light
+  );
+  &:hover {
+    background-position: right;
+  }
+}
