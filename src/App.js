@@ -1,6 +1,7 @@
 import About from './components/about/About';
 import Header from './components/header/Header';
 import { Fragment } from 'react';
+import Features from './components/features/Features';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <About />
+        <Features />
       </main>
     </Fragment>
   );

@@ -1,0 +1,43 @@
+@use '../../scss/abstracts' as *;
+
+.section {
+  background-image: linear-gradient(
+      to left top,
+      rgba(12, 7, 12, 0.8),
+      rgba(214, 199, 214, 0.8)
+    ),
+    url(../../assets/background-features.jpg);
+  background-size: cover;
+  background-position: bottom;
+
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4rem;
+}
+
+.feature {
+  color: $color-light;
+  text-align: center;
+  padding: 2.4rem 2.4rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+  &:hover {
+    transform: translateY(-2rem);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
+    color: $color-primary;
+    .icon {
+      color: $color-primary-light;
+    }
+  }
+}
+
+.icon {
+  display: inline-block;
+  font-size: 7.2rem;
+  color: $color-primary-dark;
+}
