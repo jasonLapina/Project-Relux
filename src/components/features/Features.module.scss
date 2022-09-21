@@ -1,5 +1,9 @@
 @use '../../scss/abstracts' as *;
 
+.heading {
+  color: $color-light;
+}
+
 .section {
   background-image: linear-gradient(
       to left top,
@@ -9,8 +13,8 @@
     url(../../assets/background-features.jpg);
   background-size: cover;
   background-position: bottom;
-
-  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 10vh, 100% 0, 100% 85%, 0% 100%);
+  margin-top: -10vh;
 }
 
 .container {

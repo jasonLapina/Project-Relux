@@ -2,6 +2,7 @@ import About from './components/about/About';
 import Header from './components/header/Header';
 import { Fragment } from 'react';
 import Features from './components/features/Features';
+import Villas from './components/villas/Villas';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <main>
         <About />
         <Features />
+        <Villas />
       </main>
     </Fragment>
   );

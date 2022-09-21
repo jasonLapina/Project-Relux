@@ -1,0 +1,85 @@
+@use '../../scss/abstracts' as *;
+
+.section {
+  margin-top: -15rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: $color-light;
+  column-gap: 9.6rem;
+}
+
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  &__side {
+    border-radius: 1rem;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50rem;
+    transition: all 0.8s ease;
+    backface-visibility: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  }
+
+  &__side--back {
+    transform: rotateY(180deg);
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(360deg);
+  }
+}
+
+.card-heading {
+  text-align: end;
+
+  h3 {
+    display: inline-block;
+    color: $color-dark;
+    background-color: $color-primary;
+    padding: 0.8rem 1.6rem;
+  }
+}
+.img {
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  background-position: top;
+
+  background-size: cover;
+}
+.img--1 {
+  background-image: linear-gradient(
+      to right top,
+      rgba(255, 0, 0, 0.2),
+      rgba(0, 0, 255, 0.2)
+    ),
+    url(../../assets/topvilla-1.jpg);
+}
+.img--2 {
+  background-image: linear-gradient(
+      to right top,
+      rgba(255, 0, 0, 0.2),
+      rgba(0, 0, 255, 0.2)
+    ),
+    url(../../assets/hero.jpeg);
+}
+.img--3 {
+  background-image: linear-gradient(
+      to right top,
+      rgba(255, 0, 0, 0.2),
+      rgba(0, 0, 255, 0.2)
+    ),
+    url(../../assets/topvilla-3.jpg);
+}

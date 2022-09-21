@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
 section {
   padding: 25rem 12rem;
+  background-color: $color-light;
 }

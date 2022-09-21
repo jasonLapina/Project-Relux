@@ -2,7 +2,6 @@
 @use '../../scss/abstracts' as *;
 
 .section {
-  background-color: $color-light;
   margin-top: -20vh;
 }
 
@@ -19,7 +18,7 @@
 .anchor {
   display: inline-block;
   text-decoration: none;
-  border-bottom: 0.2rem solid $color-primary;
+  border-bottom: 0.2rem solid $color-primary-dark;
   padding: 1rem 0.5rem;
   color: $color-primary-dark;
   transition: all 0.4s;
@@ -28,7 +27,6 @@
     transform: translateY(-0.2rem);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     color: white;
-    border: none;
     background-color: $color-primary-dark;
   }
 }
