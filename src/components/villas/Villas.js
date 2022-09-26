@@ -1,28 +1,28 @@
-import { Fragment } from 'react';
 import style from './Villas.module.scss';
 import Button from '../UI/Button';
+
 const Villas = () => {
   const villas = [
     {
       title: 'Christine',
-      /////// FEATS ARE AREA, BEDROOM, BATHROOM, THEATHER ROOM, RATING
-      feats: [600, 3, 2, 'None', '8.4(902)'],
-      img: '',
-      price: '',
+      feats: { sqm: 600, bed: 3, bath: 2, theater: 'None', rating: '8.4(902)' },
+      price: '$200',
     },
     {
       title: 'Christina',
-      feats: [800, 4, 4, 'Included', '8.8(724)'],
-
-      img: '',
-      price: '',
+      feats: { sqm: 800, bed: 4, bath: 4, theater: 'None', rating: '8.8(724)' },
+      price: '$300',
     },
     {
       title: 'Whichizzit',
-      feats: [1000, 5, 6, 'Included (bar)', '9.8(506)'],
-
-      img: '',
-      price: '',
+      feats: {
+        sqm: 1000,
+        bed: 5,
+        bath: 6,
+        theater: 'Included',
+        rating: '9.8(506)',
+      },
+      price: '$600',
     },
   ];
   return (
@@ -31,29 +31,47 @@ const Villas = () => {
       <div className={style.container}>
         {villas.map((villa, i) => {
           return (
-            <Fragment>
-              <div key={i} className={style.card}>
+            <div key={i} className={style.card}>
+              <div
+                key={i + 2}
+                className={`${style['card__side']} ${style['card__side--front']}`}
+              >
                 <div
-                  key={i + 2}
-                  className={`${style['card__side']} ${style['card__side--front']}`}
-                >
-                  <div
-                    key={i + 3}
-                    className={`${style.img} ${style[`img--${i + 1}`]}`}
-                    aria-label='high-end villa'
-                  />
-                  <div key={i + 4} className={style['card-heading']}>
-                    <h3 key={i + 5}>{villa.title}</h3>
-                  </div>
+                  key={i + 3}
+                  className={`${style.img} ${style[`img--${i + 1}`]}`}
+                  aria-label='high-end villa'
+                />
+                <div key={i + 4} className={style['card-heading']}>
+                  <h4 key={i + 5}>
+                    <span key={i + 6} className={style[`heading--${i + 1}`]}>
+                      The {villa.title}
+                    </span>
+                  </h4>
                 </div>
-                <div
-                  key={i + 6}
-                  className={`${style['card__side']} ${style['card__side--back']}`}
-                >
-                  <Button key={i + 7}>BOOK NOW LIKE A NIGGER</Button>
+                <ul className={style.details} key={i + 7}>
+                  <li key={i + 8}>{`${villa.feats.sqm} sqm`}</li>
+                  <li key={i + 9}>{`${villa.feats.bed} bedrooms`}</li>
+                  <li key={i + 10}>{`${villa.feats.bath} bathrooms`}</li>
+                  <li key={i + 11}>{`Theater room: ${villa.feats.theater}`}</li>
+                  <li key={i + 12}>{`Rating: ${villa.feats.rating}`}</li>
+                </ul>
+              </div>
+              <div
+                key={i + 13}
+                className={`${style['card__side']} ${
+                  style[`card__side--back`]
+                } ${style[`card__side--back--${i + 1}`]}`}
+              >
+                <div className={style.cta}>
+                  <div className={style.pricebox}>
+                    <p>ONLY</p>
+                    <p className={style.value}>{villa.price}</p>
+                    <p>/night</p>
+                  </div>
+                  <Button>Book now</Button>
                 </div>
               </div>
-            </Fragment>
+            </div>
           );
         })}
       </div>
