@@ -2,6 +2,7 @@ import style from './About.module.scss';
 import pool from '../../assets/pool.jpg';
 import spa from '../../assets/spa.jpg';
 import villa from '../../assets/villa.jpg';
+import LinkButton from '../UI/LinkButton';
 
 const About = () => {
   return (
@@ -25,9 +26,7 @@ const About = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           </p>
-          <a href='/' className={style.anchor}>
-            Learn More &rarr;
-          </a>
+          <LinkButton>Learn more</LinkButton>
         </div>
         <div className={style.images}>
           <img

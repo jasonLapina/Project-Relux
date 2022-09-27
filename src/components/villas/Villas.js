@@ -5,12 +5,24 @@ const Villas = () => {
   const villas = [
     {
       title: 'Christine',
-      feats: { sqm: 600, bed: 3, bath: 2, theater: 'None', rating: '8.4(902)' },
+      feats: {
+        sqm: 600,
+        bed: 3,
+        bath: 2,
+        theater: 'None',
+        rating: '8.4 (902)',
+      },
       price: '$200',
     },
     {
       title: 'Christina',
-      feats: { sqm: 800, bed: 4, bath: 4, theater: 'None', rating: '8.8(724)' },
+      feats: {
+        sqm: 800,
+        bed: 4,
+        bath: 4,
+        theater: 'None',
+        rating: '8.8 (724)',
+      },
       price: '$300',
     },
     {
@@ -20,7 +32,7 @@ const Villas = () => {
         bed: 5,
         bath: 6,
         theater: 'Included',
-        rating: '9.8(506)',
+        rating: '9.8 (506)',
       },
       price: '$600',
     },
@@ -49,11 +61,13 @@ const Villas = () => {
                   </h4>
                 </div>
                 <ul className={style.details} key={i + 7}>
-                  <li key={i + 8}>{`${villa.feats.sqm} sqm`}</li>
-                  <li key={i + 9}>{`${villa.feats.bed} bedrooms`}</li>
-                  <li key={i + 10}>{`${villa.feats.bath} bathrooms`}</li>
-                  <li key={i + 11}>{`Theater room: ${villa.feats.theater}`}</li>
-                  <li key={i + 12}>{`Rating: ${villa.feats.rating}`}</li>
+                  <li key={i + 8}>
+                    {villa.feats.sqm} m<sup>2</sup>
+                  </li>
+                  <li key={i + 9}>{villa.feats.bed} Bedrooms</li>
+                  <li key={i + 10}> {villa.feats.bath} Bathrooms</li>
+                  <li key={i + 11}>Theater room: {villa.feats.theater}</li>
+                  <li key={i + 12}>Rating: {villa.feats.rating}</li>
                 </ul>
               </div>
               <div

@@ -25,7 +25,7 @@ const Features = () => {
   ];
   return (
     <section className={style.section}>
-      <h2 className={style.heading}>All Villas Include</h2>
+      <h2 className={style.heading}>All Villas Include:</h2>
       <div className={style.container}>
         {features.map((feat, i) => {
           return (

@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import { Fragment } from 'react';
 import Features from './components/features/Features';
 import Villas from './components/villas/Villas';
+import Testimonials from './components/testimonials/Testimonials';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <About />
         <Features />
         <Villas />
+        <Testimonials />
       </main>
     </Fragment>
   );
