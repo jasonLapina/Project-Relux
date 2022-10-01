@@ -4,6 +4,7 @@ import { Fragment } from 'react';
 import Features from './components/features/Features';
 import Villas from './components/villas/Villas';
 import Testimonials from './components/testimonials/Testimonials';
+import Booking from './components/booking/Booking';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Features />
         <Villas />
         <Testimonials />
+        <Booking />
       </main>
     </Fragment>
   );

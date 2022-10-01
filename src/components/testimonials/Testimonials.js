@@ -36,7 +36,7 @@ const Testimonials = () => {
                 <img key={i + 2} src={entry.img} alt='customer profile' />
                 <figcaption className={style.caption}>{entry.name}</figcaption>
               </figure>
-              <div key={i + 3} className={style.text}>
+              <div key={i + 3}>
                 <h3 key={i + 4}>{entry.title}</h3>
                 <p key={i + 5}>{entry.comment}</p>
               </div>

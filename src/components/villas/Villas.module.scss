@@ -3,6 +3,8 @@
 .section {
   margin-top: -15rem;
   background-color: $color-light;
+  padding: 15rem 25rem 15rem;
+  position: relative;
 }
 .container {
   display: grid;
@@ -22,7 +24,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 90%;
+    width: 100%;
     height: 52rem;
     transition: all 0.8s ease;
     backface-visibility: hidden;
@@ -167,4 +169,11 @@
       color: $color-dark;
     }
   }
+}
+
+.btn {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
 }

@@ -89,6 +89,7 @@ const Villas = () => {
           );
         })}
       </div>
+      <Button className={style.btn}>Discover all villas</Button>
     </section>
   );
 };
