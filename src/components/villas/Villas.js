@@ -38,7 +38,7 @@ const Villas = () => {
     },
   ];
   return (
-    <section className={style.section}>
+    <section id='villas' className={style.section}>
       <h2>Most Popular Villas</h2>
       <div className={style.container}>
         {villas.map((villa, i) => {

@@ -23,7 +23,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className={style.section}>
+    <section id='testimonials' className={style.section}>
       <div className={style['bg-video']}>
         <video src={videoBg} autoPlay loop muted />
       </div>

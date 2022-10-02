@@ -6,7 +6,7 @@ import LinkButton from '../UI/LinkButton';
 
 const About = () => {
   return (
-    <section className={style.section}>
+    <section id='about' className={style.section}>
       <h2>LOREM IPSUM DOLOR sit</h2>
       <div className={style.container}>
         <div className={style.text}>

@@ -2,7 +2,7 @@ import style from './Booking.module.scss';
 import Button from '../UI/Button';
 const Booking = () => {
   return (
-    <section className={style.section}>
+    <section id='booking' className={style.section}>
       <div className={style.book}>
         <div className={style['book__form']}>
           <h2 className={style.heading}>Start Booking Now</h2>

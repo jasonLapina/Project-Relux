@@ -108,14 +108,6 @@
   }
 }
 
-.checkbox:checked ~ .backdrop {
-  transform: scale(80);
-}
-.checkbox:checked ~ .nav {
-  visibility: visible;
-  opacity: 1;
-  width: 100%;
-}
 .checkbox:checked + .label span {
   background-color: transparent;
 }
@@ -126,4 +118,14 @@
 .checkbox:checked + .label span::after {
   top: 0;
   rotate: -135deg;
+}
+
+.showBackdrop {
+  transform: scale(80);
+}
+
+.showNav {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
 }
