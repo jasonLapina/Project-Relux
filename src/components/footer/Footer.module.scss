@@ -1,0 +1,55 @@
+@use '../../scss/abstracts/' as *;
+
+.footer {
+  a {
+    text-decoration: none;
+    color: white;
+    &:hover {
+      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+      color: $color-primary;
+    }
+  }
+  p {
+    color: white;
+  }
+  padding: 10rem 0;
+  background-color: $color-dark;
+  img {
+    margin: 0 auto;
+  }
+}
+
+.text-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: baseline;
+}
+
+.logobox {
+  margin-bottom: 7.2rem;
+  img {
+    display: block;
+    height: 12rem;
+  }
+}
+
+.nav {
+  border-top: solid white 2px;
+  padding-top: 3rem;
+  ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+    a {
+      padding: 1rem 2rem;
+    }
+  }
+}
+
+.copyright {
+  border-top: solid white 2px;
+  padding-top: 3rem;
+  width: 50%;
+  letter-spacing: 0.2px;
+}

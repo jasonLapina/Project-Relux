@@ -1,8 +1,6 @@
 import style from './Booking.module.scss';
 import Button from '../UI/Button';
 const Booking = () => {
-  const today = new Date();
-  console.log(today);
   return (
     <section className={style.section}>
       <div className={style.book}>

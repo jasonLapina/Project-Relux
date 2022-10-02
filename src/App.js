@@ -5,6 +5,7 @@ import Features from './components/features/Features';
 import Villas from './components/villas/Villas';
 import Testimonials from './components/testimonials/Testimonials';
 import Booking from './components/booking/Booking';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Testimonials />
         <Booking />
       </main>
+      <Footer />
     </Fragment>
   );
 }
