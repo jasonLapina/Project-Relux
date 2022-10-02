@@ -1,7 +1,7 @@
 import style from './Villas.module.scss';
 import Button from '../UI/Button';
 
-const Villas = () => {
+const Villas = (props) => {
   const villas = [
     {
       title: 'Christine',
@@ -82,7 +82,7 @@ const Villas = () => {
                     <p className={style.value}>{villa.price}</p>
                     <p>/night</p>
                   </div>
-                  <Button>Book now</Button>
+                  <Button onClick={props.onShowForm}>Book now</Button>
                 </div>
               </div>
             </div>
