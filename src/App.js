@@ -6,10 +6,12 @@ import Villas from './components/villas/Villas';
 import Testimonials from './components/testimonials/Testimonials';
 import Booking from './components/booking/Booking';
 import Footer from './components/footer/Footer';
+import Navigation from './components/UI/Navigation';
 
 function App() {
   return (
     <Fragment>
+      <Navigation />
       <Header />
       <main>
         <About />

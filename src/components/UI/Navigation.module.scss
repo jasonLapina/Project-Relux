@@ -1,0 +1,129 @@
+@use '../../scss/abstracts/' as *;
+
+.label {
+  z-index: 4;
+  text-align: center;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  height: 8rem;
+  width: 8rem;
+  background-color: $color-light;
+  border-radius: 50%;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  &:hover span::before {
+    top: -1.5rem;
+  }
+  &:hover span::after {
+    top: 1.5rem;
+  }
+  span {
+    margin-top: 4rem;
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      width: 4rem;
+      height: 2px;
+      background-color: $color-dark;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      transition: all 0.2s;
+      content: '';
+      position: absolute;
+      left: 0;
+    }
+    &::before {
+      top: -1rem;
+    }
+    &::after {
+      top: 1rem;
+    }
+  }
+}
+.checkbox {
+  display: none;
+}
+
+.backdrop {
+  height: 8rem;
+  width: 8rem;
+  position: fixed;
+  top: 6rem;
+  right: 6rem;
+  border-radius: 50%;
+  z-index: 2;
+  background-image: radial-gradient($color-primary-light, $color-primary-dark);
+  transition: transform 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.nav {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  opacity: 0;
+  width: 0;
+  visibility: hidden;
+
+  transition: all 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+  ul {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    width: 100%;
+
+    li {
+      margin-bottom: 2rem;
+    }
+    a {
+      display: inline-block;
+      font-weight: 500;
+      font-size: 4rem;
+      letter-spacing: 0.5rem;
+      color: $color-dark;
+      padding: 1.5rem 3rem;
+      text-decoration: none;
+      transition: all 0.4s;
+      background-size: 220%;
+      background-image: linear-gradient(
+        120deg,
+        transparent 0%,
+        transparent 50%,
+        $color-light 50%
+      );
+      &:hover {
+        color: $color-primary;
+        background-position: right;
+        transform: translateX(1rem);
+      }
+    }
+  }
+}
+
+.checkbox:checked ~ .backdrop {
+  transform: scale(80);
+}
+.checkbox:checked ~ .nav {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+}
+.checkbox:checked + .label span {
+  background-color: transparent;
+}
+.checkbox:checked + .label span::before {
+  top: 0;
+  rotate: 135deg;
+}
+.checkbox:checked + .label span::after {
+  top: 0;
+  rotate: -135deg;
+}
