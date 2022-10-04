@@ -1,6 +1,26 @@
-@mixin absoluteCenter {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+@mixin query($breakpoint) {
+  @if $breakpoint == phone {
+    //600px
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tabPort {
+    //900px
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tabLand {
+    //1200px
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktopSmall {
+    //1500px
+    @media (max-width: 93.75em) {
+      @content;
+    }
+  }
 }

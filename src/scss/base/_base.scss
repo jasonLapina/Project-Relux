@@ -3,6 +3,19 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+
+  @include query(desktopSmall) {
+    font-size: 59.375%;
+  }
+  @include query(tabLand) {
+    font-size: 56.25%;
+  }
+  @include query(tabPort) {
+    font-size: 50%;
+  }
+  @include query(phone) {
+    font-size: 44%;
+  }
 }
 
 body {
@@ -13,6 +26,9 @@ body {
   color: #777;
   padding: 3rem;
   overflow-x: hidden;
+  @include query(phone) {
+    padding: 0;
+  }
 }
 
 * {

@@ -5,12 +5,19 @@
   margin-top: -20vh;
   background-color: $color-light;
   padding: 25rem 10rem;
+  @include query(tabPort) {
+    padding: 20rem 5rem;
+  }
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 6.2rem;
+  @include query(tabPort) {
+    grid-template-columns: 1fr;
+    margin-bottom: 20rem;
+  }
 }
 
 .paragraph {
@@ -18,39 +25,54 @@
 }
 
 .images {
-  display: flex;
+  pointer-events: none;
   align-items: center;
   justify-content: center;
   position: relative;
+  &:hover img:not(:hover) {
+    transform: scale(0.9);
+  }
+
   img {
+    pointer-events: auto;
     position: absolute;
     width: 55%;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
     transition: all 0.2s;
     outline-offset: 1.1rem;
-
     &:hover {
       transform: scale(1.05);
       box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.3);
       z-index: 2;
       outline: 0.5rem solid $color-primary;
     }
+
+    @include query(tabLand) {
+      width: 60%;
+    }
+
+    @include query(tabPort) {
+      width: 40%;
+    }
   }
   &--pool {
-    left: 0;
+    left: 7rem;
     top: -2rem;
+    @include query(tabPort) {
+    }
   }
   &--spa {
     right: 0;
     top: 2rem;
+    @include query(tabPort) {
+      top: -2rem;
+      right: 7rem;
+    }
   }
   &--villa {
-    left: 20%;
-    top: 10rem;
-  }
-  &:hover {
-    img:not(:hover) {
-      transform: scale(0.9);
+    left: 30%;
+    top: 4rem;
+    @include query(tabPort) {
     }
   }
 }

@@ -10,10 +10,8 @@ const Header = () => {
       </div>
       <div>
         <h1 className={style.heading}>
-          <p className={style['heading-main']}>relux</p>
-          <p className={`subheading ${style.subheading}`}>
-            experience relaxation in luxury
-          </p>
+          <p className={style['heading-main']}>relaxation</p>
+          <p className={style.subheading}>is the ultimate luxury</p>
           <Button className={style.btn}>Discover Villas</Button>
         </h1>
       </div>

@@ -21,26 +21,25 @@
   height: 50rem;
   border-radius: 1rem;
   box-shadow: 0 1.5 4rem rgba($color: #000000, $alpha: 0.3);
-}
-
-.book__form {
-  width: 50%;
-  padding: 6rem;
+  &__form {
+    width: 50%;
+    padding: 6rem;
+  }
 }
 
 .heading {
+  text-align: left;
   margin-bottom: 4rem;
+  margin-top: -1rem;
+  font-size: 3rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  button {
-    width: 50%;
-    margin: 2rem auto;
-  }
-  label {
+  gap: 3.2rem;
+
+  &__label {
     font-size: 1.2rem;
     color: $color-primary-dark;
     font-weight: 700;
@@ -49,10 +48,9 @@
     display: block;
     transition: all 0.4s;
   }
-  input {
+  &__input {
     font-family: inherit;
     color: inherit;
-    display: block;
     border: none;
     font-size: 1.5rem;
     padding: 1.5rem 2rem;
@@ -75,6 +73,51 @@
   input:placeholder-shown + label {
     transform: translateY(-100%);
     opacity: 0;
-    visibility: hidden;
   }
+}
+
+.radio-group {
+  display: flex;
+  gap: 4rem;
+}
+.radio-container {
+  input {
+    display: none;
+    &:checked + label span::after {
+      opacity: 1;
+    }
+  }
+  label {
+    position: relative;
+    padding-left: 3.5rem;
+    cursor: pointer;
+  }
+}
+.radio {
+  position: absolute;
+  top: -0.4rem;
+  left: 0;
+  display: inline-block;
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: solid $color-primary 5px;
+  &::after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1.3rem;
+    width: 1.3rem;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: $color-primary;
+    transition: opacity 0.3s;
+  }
+}
+
+.btn--cta {
+  width: 40%;
 }

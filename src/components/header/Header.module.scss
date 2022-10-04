@@ -1,4 +1,5 @@
 @use '../../scss/base' as *;
+@use '../../scss/abstracts' as *;
 
 .header {
   height: 95vh;
@@ -26,22 +27,39 @@
 }
 
 .heading {
+  text-align: center;
   color: white;
   text-transform: uppercase;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -80%);
-  text-align: center;
+  @include query(phone) {
+    transform: translate(-50%, -50%);
+  }
 }
 
 .heading-main {
+  font-weight: 700;
+  font-size: 6.4rem;
   animation: moveInLeft 1.6s ease-out;
+  letter-spacing: 3.5rem;
+  margin-right: -3.5rem;
+  @include query(phone) {
+    letter-spacing: 2rem;
+  }
 }
 
 .subheading {
+  font-weight: 400;
+  font-size: 2.4rem;
   animation: moveInRight 1.6s ease-out;
   margin-bottom: 2.4rem;
+  letter-spacing: 2rem;
+  margin-right: -2rem;
+  @include query(phone) {
+    letter-spacing: 1rem;
+  }
 }
 
 .btn {
