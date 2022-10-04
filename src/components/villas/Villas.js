@@ -55,7 +55,10 @@ const Villas = (props) => {
                 />
                 <div key={i + 4} className={style['card-heading']}>
                   <h4 key={i + 5}>
-                    <span key={i + 6} className={style[`heading--${i + 1}`]}>
+                    <span
+                      key={i + 6}
+                      className={style[`card-heading--${i + 1}`]}
+                    >
                       The {villa.title}
                     </span>
                   </h4>

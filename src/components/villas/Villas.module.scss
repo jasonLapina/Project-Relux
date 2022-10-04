@@ -5,12 +5,21 @@
   background-color: $color-light;
   padding: 15rem 25rem 15rem;
   position: relative;
+  @include query(desktopSmall) {
+    padding: 10rem 12rem 15rem;
+  }
+  @include query(phone) {
+    padding: 10rem 4rem 15rem;
+  }
 }
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   background-color: $color-light;
   column-gap: 9.6rem;
+  @include query(tabLand) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .card {
@@ -29,78 +38,105 @@
     transition: all 0.8s ease;
     backface-visibility: hidden;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    &--back {
+      transform: rotateY(180deg);
+    }
+    &--back--1 {
+      background-image: linear-gradient(
+        to right top,
+        rgba($color-tertiary-dark, 0.2),
+        rgba($color-tertiary-light, 0.2)
+      );
+    }
+    &--back--2 {
+      background-image: linear-gradient(
+        to right top,
+        rgba($color-secondary-dark, 0.2),
+        rgba($color-secondary-light, 0.2)
+      );
+    }
+    &--back--3 {
+      background-image: linear-gradient(
+        to right top,
+        rgba($color-primary-dark, 0.2),
+        rgba($color-primary-light, 0.2)
+      );
+    }
   }
-
-  &__side--back {
-    transform: rotateY(180deg);
-  }
-  &__side--back--1 {
-    background-image: linear-gradient(
-      to right top,
-      rgba($color-tertiary-dark, 0.2),
-      rgba($color-tertiary-light, 0.2)
-    );
-  }
-  &__side--back--2 {
-    background-image: linear-gradient(
-      to right top,
-      rgba($color-secondary-dark, 0.2),
-      rgba($color-secondary-light, 0.2)
-    );
-  }
-  &__side--back--3 {
-    background-image: linear-gradient(
-      to right top,
-      rgba($color-primary-dark, 0.2),
-      rgba($color-primary-light, 0.2)
-    );
-  }
-
   &:hover &__side--front {
     transform: rotateY(180deg);
   }
   &:hover &__side--back {
     transform: rotateY(360deg);
   }
+  @include query(tabLand) {
+    //////////////QUERY START HERE///////////////
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    &__side {
+      width: 50%;
+      &--back {
+        transform: translateX(100%) rotateY(0);
+      }
+    }
+  }
+}
+
+.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  .pricebox {
+    text-align: center;
+    margin-bottom: 8rem;
+    p {
+      font-size: 1.6rem;
+    }
+    .value {
+      font-size: 6rem;
+      font-weight: 100;
+      color: $color-dark;
+    }
+  }
 }
 
 .card-heading {
   font-size: 2.8rem;
   letter-spacing: 2px;
-
   text-transform: uppercase;
   text-align: right;
   color: $color-light;
   position: absolute;
   top: 12rem;
-  right: 2rem;
+  right: 4rem;
   width: 50%;
+  &--1 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-tertiary-dark, 0.85),
+      rgba($color-tertiary, 0.85)
+    );
+  }
+  &--2 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-secondary-dark, 0.85),
+      rgba($color-secondary, 0.85)
+    );
+  }
+  &--3 {
+    background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-dark, 0.85),
+      rgba($color-primary, 0.85)
+    );
+  }
   span {
     padding: 1rem 1.5rem;
     box-decoration-break: clone;
   }
-}
-
-.heading--1 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-tertiary-dark, 0.85),
-    rgba($color-tertiary, 0.85)
-  );
-}
-.heading--2 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-secondary-dark, 0.85),
-    rgba($color-secondary, 0.85)
-  );
-}
-.heading--3 {
-  background-image: linear-gradient(
-    to right bottom,
-    rgba($color-primary-dark, 0.85),
-    rgba($color-primary, 0.85)
-  );
 }
 
 .img {
@@ -148,25 +184,6 @@
     padding: 1rem;
     &:not(:last-child) {
       border-bottom: 1px solid rgba($color-dark, 0.2);
-    }
-  }
-}
-
-.cta {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  .pricebox {
-    text-align: center;
-    margin-bottom: 8rem;
-    p {
-      font-size: 1.6rem;
-    }
-    .value {
-      font-size: 6rem;
-      font-weight: 100;
-      color: $color-dark;
     }
   }
 }
