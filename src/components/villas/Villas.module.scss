@@ -70,7 +70,6 @@
     transform: rotateY(360deg);
   }
   @include query(tabLand) {
-    //////////////QUERY START HERE///////////////
     &:not(:last-child) {
       margin-bottom: 4rem;
     }
