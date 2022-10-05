@@ -1,4 +1,4 @@
-@use '../../scss/abstracts/' as *;
+@use '../../scss/abstracts' as *;
 
 .footer {
   a {
@@ -45,6 +45,24 @@
       padding: 1rem 2rem;
     }
   }
+  @include query(tabLand) {
+    ul {
+      gap: 2rem;
+    }
+  }
+  @include query(tabPort) {
+    width: 90%;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @include query(phone) {
+    ul {
+      grid-template-columns: repeat(2, 1fr);
+      font-size: 1.8rem;
+    }
+  }
 }
 
 .copyright {
@@ -52,4 +70,7 @@
   padding-top: 3rem;
   width: 50%;
   letter-spacing: 0.2px;
+  @include query(tabLand) {
+    width: 70%;
+  }
 }
