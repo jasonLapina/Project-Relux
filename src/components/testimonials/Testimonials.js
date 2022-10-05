@@ -1,6 +1,6 @@
 import style from './Testimonials.module.scss';
 import jason from '../../assets/testimonial-1.jpg';
-import jelanie from '../../assets/testimonial-2.jpg';
+import irene from '../../assets/testimonial-2.jpg';
 import LinkButton from '../UI/LinkButton';
 import videoBg from '../../assets/video.mp4';
 
@@ -15,7 +15,7 @@ const Testimonials = () => {
     },
     {
       title: 'Kinda happy happy nemern',
-      img: jelanie,
+      img: irene,
       comment:
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa officiis rerum corporis distinctio laudantium obcaecati eveniet maiores ut qui dolore quis voluptatum, saepe necessitatibus maxime adipisci labore corrupti exercitationem fugit. orporis distinctio laudantium obcaecati eveniet maiores ut qui dolore quis voluptatum, saepe necessitatibus maxime adipisci labore corrupti exercitationem fugit.',
       name: 'Wim Kexler',

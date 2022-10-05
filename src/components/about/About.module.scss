@@ -6,7 +6,7 @@
   background-color: $color-light;
   padding: 25rem 10rem;
   @include query(tabPort) {
-    padding: 20rem 5rem;
+    padding: 20rem 10rem;
   }
 }
 
@@ -59,8 +59,6 @@
   &--pool {
     left: 7rem;
     top: -2rem;
-    @include query(tabPort) {
-    }
   }
   &--spa {
     right: 0;
@@ -79,6 +77,6 @@
     }
   }
   @include query(tabLand) {
-    transform: translateY(6rem);
+    transform: translateY(4rem);
   }
 }
