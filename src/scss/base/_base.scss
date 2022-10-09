@@ -29,7 +29,7 @@ body {
   @include query(phone) {
     padding: 0;
   }
-  max-width: 130rem;
+  max-width: 190rem;
   margin: 0 auto;
 }
 
