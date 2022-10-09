@@ -29,6 +29,8 @@ body {
   @include query(phone) {
     padding: 0;
   }
+  max-width: 130rem;
+  margin: 0 auto;
 }
 
 * {
